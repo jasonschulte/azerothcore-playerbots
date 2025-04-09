@@ -1,10 +1,10 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-# CMAKE_INSTALL_PREFIX="$(pwd)/env/dist"
+CMAKE_INSTALL_PREFIX="$(pwd)/env/dist"
 mkdir -pv build
 cd build
 cmake ../ \
-  -DCMAKE_INSTALL_PREFIX="$(pwd)/env/dist"  \
+  -DCMAKE_INSTALL_PREFIX="$CMAKE_INSTALL_PREFIX"  \
   -DAPPS_BUILD="all"                      \
   -DTOOLS_BUILD="none"                    \
   -DSCRIPTS="static"                      \
